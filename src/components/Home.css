@@ -1,0 +1,323 @@
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  min-height: calc(100vh - 280px);
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.home-about {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Text size: change font-size below to make bigger/smaller */
+.home-name {
+  font-size: 2.25rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+html.light .home-name {
+  color: #1a1a1a;
+}
+
+.home-list {
+  list-style: none;
+  margin-bottom: 1rem;
+}
+
+.home-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.15rem;
+  color: #fff;
+}
+
+html.light .home-list li {
+  color: #333;
+}
+
+.home-list li .home-logo {
+  flex-shrink: 0;
+}
+
+.home-list li .home-logo {
+  height: 22px;
+  width: auto;
+}
+
+.home-list li svg {
+  flex-shrink: 0;
+  color: #ccc;
+}
+
+html.light .home-list li svg {
+  color: #555;
+}
+
+#tags {
+  font-weight: bold;
+  color: #fff;
+  font-size: 1rem;
+}
+
+html.light #tags {
+  color: #333;
+}
+
+.home-tags {
+  color: #e0e0e0;
+}
+
+html.light .home-tags {
+  color: #444;
+}
+
+.home-photo {
+  flex-shrink: 0;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #333;
+}
+
+html.light .home-photo {
+  background: #ddd;
+}
+
+.home-photo img {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 600px) {
+  .home {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem;
+    min-height: auto;
+    padding-bottom: max(1.5rem, env(safe-area-inset-bottom));
+  }
+
+  .home-about {
+    text-align: center;
+    width: 100%;
+  }
+
+  .home-list {
+    margin-bottom: 0.75rem;
+  }
+
+  .home-list li {
+    justify-content: center;
+    font-size: 0.95rem;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  .home-name {
+    font-size: 1.5rem;
+    line-height: 1.3;
+    word-break: break-word;
+  }
+
+  #tags {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    text-align: center;
+  }
+
+  .home-photo {
+    width: 140px;
+    height: 140px;
+  }
+
+  #resume {
+    width: 100%;
+    max-width: 280px;
+    padding: 12px 20px;
+    font-size: 1rem;
+  }
+
+  .social-section {
+    gap: 1rem;
+  }
+
+  .social-icons {
+    justify-content: center;
+    gap: 12px;
+    margin-top: 1rem;
+  }
+
+  .social-icons a {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .social-icons svg {
+    width: 22px;
+    height: 22px;
+  }
+}
+#resume {
+  background: #fff;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+html.light #resume {
+  background: #1a1a1a;
+  color: #fff;
+}
+
+.social-icons {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.social-icons a {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+html.light .social-icons a {
+  color: #1a1a1a;
+}
+
+.social-icons a:hover {
+  color: #0a66c2;
+  transform: scale(1.15);
+}
+
+.social-section {
+  display: flex;
+  flex-direction: column; /* 🔥 THIS forces vertical layout */
+  gap: 20px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 16px;
+}
+
+.tech-stack-box {
+  width: 100%;
+  margin-top: 8px;
+  padding: 1rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.tech-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 0.75rem;
+  text-align: center;
+}
+
+html.light .tech-title {
+  color:black;
+}
+
+.tech-stack-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.tech-stack-track {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.5rem;
+  width: max-content;
+  animation: techScroll 28s linear infinite;
+}
+
+.tech-stack-track img {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  flex-shrink: 0;
+  display: block;
+}
+
+/* Scroll full first set (0→-50%), then brief pause so last icons are visible before loop */
+@keyframes techScroll {
+  0% { transform: translateX(0); }
+  96% { transform: translateX(-50%); }
+  100% { transform: translateX(-50%); }
+}
+
+@media (max-width: 600px) {
+  .tech-stack-box {
+    padding: 0.75rem;
+    margin-top: 1rem;
+    border-radius: 10px;
+  }
+
+  .tech-title {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .tech-stack-track img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .tech-stack-track {
+    gap: 1rem;
+    animation-duration: 24s;
+  }
+}
+
+@media (max-width: 380px) {
+  .home-name {
+    font-size: 1.25rem;
+  }
+
+  .home-list li {
+    font-size: 0.9rem;
+  }
+
+  #tags {
+    font-size: 0.8rem;
+  }
+
+  .home-photo {
+    width: 120px;
+    height: 120px;
+  }
+
+  .navbar-links {
+    gap: 0.5rem;
+  }
+
+  .navbar a svg,
+  .navbar-theme svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+

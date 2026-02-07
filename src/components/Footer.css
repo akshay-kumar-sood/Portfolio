@@ -1,0 +1,17 @@
+.footer {
+    margin-top: 4.5rem;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    font-size: 1rem;
+    color: #ccc;
+  }
+  
+  .footer .heart {
+    color: #e25555;
+    margin: 0 4px;
+  }
+  
+  html.light .footer {
+    color: #444;
+  }
+  

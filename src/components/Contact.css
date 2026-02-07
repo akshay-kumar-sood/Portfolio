@@ -1,0 +1,26 @@
+.contacts {
+    min-height: calc(100vh - 80px); /* leave space for navbar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    color: #fff;
+  }
+  
+  .contact-header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .contact-header h3 {
+    font-size: 1rem;
+    font-weight: 400;
+    opacity: 0.8;
+  }
+  
+  /* Light mode support */
+  html.light .contacts {
+    color: #1a1a1a;
+  }
+  
