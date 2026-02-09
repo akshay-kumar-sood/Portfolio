@@ -5,10 +5,10 @@
     color:#fff;
   }
 
-  html.light .certificates {
+  html.light .certificates,html.light .cert-date,html.light .cert-source,html.light .cert-meta{
     color: #1a1a1a; /* light mode text */
   }
-  
+
   .cert-header {
     text-align: center;
     margin-bottom: 2rem;
